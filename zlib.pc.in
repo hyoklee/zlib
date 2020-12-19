@@ -1,0 +1,13 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+exec_prefix=@CMAKE_INSTALL_PREFIX@
+libdir=@ZLIB_INSTALL_LIB_DIR@
+sharedlibdir=@ZLIB_INSTALL_LIB_DIR@
+includedir=@ZLIB_INSTALL_INC_DIR@
+
+Name: zlib
+Description: zlib compression library
+Version: @VERSION@
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
