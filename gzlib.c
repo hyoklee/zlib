@@ -212,7 +212,7 @@ local gzFile gz_open(path, fd, mode)
 #endif
 #if !defined(NO_snprintf) && !defined(NO_vsnprintf)
         /* (void)snprintf(state->path, len + 1, "%s", (const char *)path); */
-        (void)snprintf(state->path, len + 1, "%s", (const char *)path);        
+        snprintf(state->path, len + 1, "%s", (const char *)path);        
 #else
         strcpy(state->path, path);
 #endif
