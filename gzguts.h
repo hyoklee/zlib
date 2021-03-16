@@ -20,6 +20,7 @@
 
 #include <stdio.h>
 #include "zlib.h"
+#define STDC
 #ifdef STDC
 #  include <string.h>
 #  include <stdlib.h>
