@@ -4,6 +4,7 @@
  */
 
 #include "gzguts.h"
+int vsnprintf(char *, unsigned long, const char *, struct __va_list_tag *);
 
 /* Local functions */
 local int gz_init OF((gz_statep));

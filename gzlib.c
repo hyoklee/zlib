@@ -4,6 +4,7 @@
  */
 
 #include "gzguts.h"
+int snprintf(char*, unsigned long, const char*, ...);
 
 #if defined(_WIN32) && !defined(__BORLANDC__) && !defined(__MINGW32__)
 #  define LSEEK _lseeki64
@@ -211,8 +212,7 @@ local gzFile gz_open(path, fd, mode)
     else
 #endif
 #if !defined(NO_snprintf) && !defined(NO_vsnprintf)
-        /* (void)snprintf(state->path, len + 1, "%s", (const char *)path); */
-        snprintf(state->path, len + 1, "%s", (const char *)path);        
+        (void) snprintf(state->path, (unsigned long)(len + 1), (const char*)"%s", (const char *)path);
 #else
         strcpy(state->path, path);
 #endif
