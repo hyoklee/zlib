@@ -4,7 +4,10 @@
  */
 
 #include "gzguts.h"
+#ifdef __APPLE__
 int vsnprintf(char *, unsigned long, const char *, struct __va_list_tag *);
+#endif
+
 
 /* Local functions */
 local int gz_init OF((gz_statep));
